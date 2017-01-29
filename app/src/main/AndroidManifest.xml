@@ -44,6 +44,8 @@
         </activity>
 
 
+
+
         <receiver android:name=".AlarmReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -86,6 +88,9 @@
             android:exported="false" />
 
         <service android:enabled="true" android:name=".Experiment"
+            android:exported="false" />
+
+        <service android:enabled="true" android:name=".UpdateService"
             android:exported="false" />
 
         <service

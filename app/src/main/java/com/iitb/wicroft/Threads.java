@@ -39,7 +39,7 @@ public class Threads {
 
         String temp_name = Utils.getMACAddress() ; //this would be the name at the server
         String logFilePath = Constants.logDirectory + "/" + logFileName;
-        String url = "http://" + MainActivity.serverip + ":" + MainActivity.port + "/" + Constants.SERVLET_NAME + "/receiveLogFile.jsp";
+        String url = "http://" + "wicroft.cse.iitb.ac.in" + ":" + MainActivity.port + "/" + Constants.SERVLET_NAME + "/receiveLogFile.jsp";
         Log.d(Constants.LOGTAG, "Upload url " + url);
 //		String url = "http://192.168.0.107/fup.php";
 

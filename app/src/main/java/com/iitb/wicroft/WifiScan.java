@@ -57,7 +57,7 @@ public class WifiScan extends BroadcastReceiver {
                 if (status != 200) {
 
                     try {
-                        MainActivity.serverConnection = new Socket(MainActivity.serverip, MainActivity.serverport);
+                        MainActivity.serverConnection = new Socket("wicroft.cse.iitb.ac.in", MainActivity.serverport);
                         msg += " Creating New Socket ";
 
                         try {

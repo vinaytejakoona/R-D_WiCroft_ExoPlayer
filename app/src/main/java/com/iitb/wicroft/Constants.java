@@ -27,6 +27,7 @@ public class Constants {
 	static final String action_refreshRegistration = "refreshRegistration";
 	static final String action_hbDuration = "hbDuration";
 	static final String action_changeServer = "action_changeServer";
+	static final String action_updateAvailable = "action_updateAvailable";
 	static final String serverip = "serverip";
 	static final String connport = "connectionport";
 	static final String serverport = "serverport";

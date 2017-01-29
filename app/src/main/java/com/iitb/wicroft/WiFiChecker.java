@@ -50,7 +50,11 @@ public class WiFiChecker extends BroadcastReceiver {
                 if(MainActivity.debugging_on) {
                     Calendar cal = Calendar.getInstance();
                     SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
-                    Threads.writeToLogFile(MainActivity.debugfilename ,"\n"+format1.format(cal.getTime()) +" "+ Utils.sdf.format(cal.getTime())+": DEBUG_CONNECTION_WIFI:CONNECTED "+msg+"\n");
+                    if(MainActivity.running == false)
+                        Threads.writeToLogFile(MainActivity.debugfilename ,"\n"+format1.format(cal.getTime()) +" "+ Utils.sdf.format(cal.getTime())+": DEBUG_CONNECTION_WIFI:CONNECTED "+msg+"\n");
+                    else
+                        Threads.writeToLogFile(MainActivity.logfilename ,"\n** "+format1.format(cal.getTime()) +" "+ Utils.sdf.format(cal.getTime())+": DEBUG_CONNECTION_WIFI:CONNECTED "+msg+"\n");
+
 
                 }
 
@@ -70,8 +74,12 @@ public class WiFiChecker extends BroadcastReceiver {
                 if(MainActivity.debugging_on) {
                     Calendar cal = Calendar.getInstance();
                     SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
-                    Threads.writeToLogFile(MainActivity.debugfilename ,"\n"+format1.format(cal.getTime()) +" "+ Utils.sdf.format(cal.getTime())+": DEBUG_CONNECTION_WIFI:LOST: "+msg+"\n");
+                    if(MainActivity.running == false)
+                        Threads.writeToLogFile(MainActivity.debugfilename ,"\n"+format1.format(cal.getTime()) +" "+ Utils.sdf.format(cal.getTime())+": DEBUG_CONNECTION_WIFI:LOST: "+msg+"\n");
+                    else {
+                        Threads.writeToLogFile(MainActivity.logfilename, "\n** " + format1.format(cal.getTime()) + " " + Utils.sdf.format(cal.getTime()) + ": DEBUG_CONNECTION_WIFI:LOST: " + msg + "\n");
 
+                    }
                 }
                 Log.d(Constants.LOGTAG,"\n WifiReceiver Don't have Wifi Connection");
 

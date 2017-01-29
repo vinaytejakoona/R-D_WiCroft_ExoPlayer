@@ -14,6 +14,11 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Map;
+import com.rampo.updatechecker.notice.Notice;
+import com.rampo.updatechecker.UpdateChecker;
+import com.rampo.updatechecker.store.Store;
+
+import android.content.pm.PackageManager;
 
 /**
  * Created by swinky on 28/6/16.
@@ -238,13 +243,12 @@ public class EventRunner extends AsyncTask< Void , Void, Void> {
 
                     }
 
-
                 }
                 else if(action.compareTo(Constants.action_controlFile) == 0 ){
                     String control_msg = jsonMap.get(Constants.message).toString();
                     String fileid = jsonMap.get(Constants.fileid).toString();
 
-                    String status = Threads.saveControlFile(fileid , control_msg);
+                    String status = Threads.saveControlFile(fileid, control_msg);
                     if(status != " control file write success\n"){
                         // ack
                         String ack = "{\"action\":\"" + Constants.acknowledgement + "\",\"" + Constants.fileid + "\":\"" + fileid + "\"}";
@@ -321,6 +325,14 @@ public class EventRunner extends AsyncTask< Void , Void, Void> {
                     }
 
                 }
+                else if(action.compareTo(Constants.action_updateAvailable) == 0){
+                    //start the activity here
+                  //  Notification.show(ctx ,Store.GOOGLE_PLAY, 7786);
+                    Intent startUpdateService = new Intent(ctx, UpdateService.class);
+                    ctx.startService(startUpdateService);
+                    Log.d("EventRunner" , " started the service...");
+
+                }
 
                 //these funcationalities are not used
                 else if(action.compareTo(Constants.action_hbDuration) == 0) //change heartbeat duration
@@ -330,19 +342,21 @@ public class EventRunner extends AsyncTask< Void , Void, Void> {
                 }
                 else if(action.compareTo(Constants.action_changeServer) == 0) //change server-ip&port duration
                 {
+                    /*
                     if(jsonMap.get(Constants.serverip)!="")
                         MainActivity.serverip = jsonMap.get(Constants.serverip);
                     if(jsonMap.get(Constants.connport)!="")
                         MainActivity.serverport = Integer.parseInt(jsonMap.get(Constants.connport));
                     if(jsonMap.get(Constants.serverport)!="")
                         MainActivity.port = Integer.parseInt(jsonMap.get(Constants.serverport));
-
+*/
 
                 }
                 else {
                     //Log.d(Constants.LOGTAG, "eventRunner() : Wrong action code");
                     msg +=" Wrong Action Code ";
                 }
+
             }
 
         } catch (Exception e) {
@@ -364,6 +378,11 @@ public class EventRunner extends AsyncTask< Void , Void, Void> {
 
     }
 
+    @Override
+    protected void onProgressUpdate(Void... values) {
+
+        super.onProgressUpdate(values);
+    }
 
     @Override
     protected void onPostExecute(Void aVoid) {

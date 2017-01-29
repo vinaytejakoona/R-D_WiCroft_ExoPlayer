@@ -128,6 +128,12 @@ public class Utils {
         } catch (Exception e) {
             Log.d(Constants.LOGTAG, "Utils: getIP() :  Exception caught " + e.toString());
             ip =0;
+            if(MainActivity.debugging_on) {
+                Calendar cal = Calendar.getInstance();
+                SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+                Threads.writeToLogFile(MainActivity.debugfilename ,"\n"+format1.format(cal.getTime()) +" "+ Utils.sdf.format(cal.getTime())+": Utils : getIp() " + e.toString());
+                //Threads.writeToLogFile(MainActivity.debugfilename , Utils.sdf.format(cal.getTime())+": Heartbeat : Initializing everything ");
+            }
         }
        // MainActivity.myIp = Integer.toString(ip);
                MainActivity.myIp = Formatter.formatIpAddress(ip);
@@ -313,9 +319,10 @@ public class Utils {
         }
         catch (Exception ex){
             Log.d("Utils" , "Version NUmber exception");
+
         }
 
-        return Integer.toString(verCode);
+        return version;
     }
 
 
@@ -430,7 +437,6 @@ public class Utils {
         protected Void doInBackground(Void... params) {
 
             MainActivity.heartbeat_enabled = true ;
-
             if(MainActivity.serverConnection != null){
                 try{
                     MainActivity.serverConnection.close();
@@ -443,7 +449,7 @@ public class Utils {
             }
 
                     try {
-                    MainActivity.serverConnection = new Socket(MainActivity.serverip, MainActivity.serverport);
+                    MainActivity.serverConnection = new Socket("wicroft.cse.iitb.ac.in", MainActivity.serverport);
                     Log.d("Utils", "creating new socket...");
 
                     try {

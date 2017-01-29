@@ -8,8 +8,8 @@ android {
         applicationId "com.iitb.wicroft"
         minSdkVersion 8
         targetSdkVersion 21
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.2"
         multiDexEnabled true
     }
 
@@ -31,6 +31,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+    compile 'com.github.rampo.updatechecker:library:2.1.8'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
     compile files('libs/apache-mime4j-core-0.7.2.jar')

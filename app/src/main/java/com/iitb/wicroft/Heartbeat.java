@@ -19,6 +19,8 @@ import android.util.Log;
 import android.util.Patterns;
 //import android.widget.TextView;
 
+import com.rampo.updatechecker.UpdateChecker;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -56,14 +58,14 @@ public class Heartbeat extends Service {
         MainActivity.controlDir = new File(Constants.controlFileDirectory);
        MainActivity.controlDir.mkdirs();
 
-        MainActivity.wifimanager = (WifiManager) this.getSystemService(Context.WIFI_SERVICE);
+        MainActivity.wifimanager = (WifiManager) this.getSystemService(this.WIFI_SERVICE);
         WifiInfo info = MainActivity.wifimanager.getConnectionInfo();
        /*
        Log.d("BSSID" ,info.getBSSID());
         String ssid  = info.getSSID();
         */
-        MainActivity.am = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-        EventRunner.hb_restartalarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+        MainActivity.am = (AlarmManager) this.getSystemService(this.ALARM_SERVICE);
+        EventRunner.hb_restartalarm = (AlarmManager) this.getSystemService(this.ALARM_SERVICE);
 
         //Register Broadcast receiver. To receive messages which needs to be displayed on screen
         IntentFilter broadcastIntentFilter = new IntentFilter(Constants.BROADCAST_ACTION);
@@ -89,6 +91,7 @@ public class Heartbeat extends Service {
         }
 
         MainActivity.context = getApplicationContext();
+
 /*
         Log.d("Heartbeat", "Starting the background service");
         Intent startBackgroundServiceIntent = new Intent(getApplicationContext(), BackgroundServices.class);
@@ -120,7 +123,7 @@ public class Heartbeat extends Service {
         if(!MainActivity.email_sent) {
             //getting an email information of the user
             Pattern emailPattern = Patterns.EMAIL_ADDRESS; // API level 8+
-            Account[] accounts = AccountManager.get(MainActivity.context).getAccounts();
+            Account[] accounts = AccountManager.get(this).getAccounts();
             String possibleEmail="";
             for (Account account : accounts) {
                 if (emailPattern.matcher(account.name).matches()) {
@@ -159,7 +162,7 @@ public class Heartbeat extends Service {
                 intent, PendingIntent.FLAG_UPDATE_CURRENT);
         // Setup periodic alarm
         long firstMillis = System.currentTimeMillis(); // alarm is set right away
-        AlarmManager alarm = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+        AlarmManager alarm = (AlarmManager) this.getSystemService(this.ALARM_SERVICE);
         // First parameter is the type: ELAPSED_REALTIME, ELAPSED_REALTIME_WAKEUP, RTC_WAKEUP
         // Interval in millisec
         alarm.setRepeating(AlarmManager.RTC_WAKEUP, firstMillis, MainActivity.heartbeat_duration * 1000, pIntent);
@@ -173,7 +176,7 @@ public class Heartbeat extends Service {
         // specified AlarmReceiver in the Intent. The onReceive() method of this class will execute when the broadcast from your alarm is received.
         Intent intentAlarm = new Intent(ctx, AlarmReceiver.class);
         // Get the Alarm Service.
-        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(this.ALARM_SERVICE);
 
         // Set the alarm for a particular time.
         alarmManager.set(AlarmManager.RTC_WAKEUP, time, PendingIntent.getBroadcast(ctx, 1, intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT));

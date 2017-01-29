@@ -1,5 +1,6 @@
 package com.iitb.wicroft;
 
+import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +13,9 @@ import android.net.wifi.WifiManager;
 import android.view.View;
 import android.webkit.WebView;
 
+import com.rampo.updatechecker.UpdateChecker;
+import com.rampo.updatechecker.notice.Notice;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -22,20 +26,16 @@ import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
-    /*
-       public static boolean bootup_hb_service = false;
-       */
 
     static SimpleDateFormat sdf = new SimpleDateFormat("ZZZZ HH:mm:s:S", Locale.US);
-
     public static HashMap<Integer, WebView> webViewMap = new HashMap<Integer, WebView>();
 
-    public static String serverip = "10.129.28.176";
+   // public static String serverip = "10.129.28.176";
     public static int serverport = 8001;
-    public static int sessionid = 1;
+   // public static int sessionid = 1;
     public static int port = 8080;
 
-    public  static boolean debugging_on = true;
+    public static boolean debugging_on = true;
     static AlarmManager am ;
     static WifiManager wifimanager;
     static File logDir; //directory containing log files
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
    // public static boolean registered = false;
     public static Socket serverConnection = null;
-    public static String last_heartbeat = null;
+   // public static String last_heartbeat = null;
     public static int heartbeat_duration = 60; //by default the device sends one heartbeat per 60 seconds.
     public static DataInputStream dis = null;
     public static DataOutputStream dout =null;
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     static boolean heartbeat_enabled = true ;
     static int numDownloadOver = 0; //indicates for how many events download in thread is over
 
-    //Alarm specific
+
     static Load load = null; //this stores info about current experiment such as exp id and all events(get requests) with resp scheduled time
     static int currEvent = 0; //which event is currently being processed
 
@@ -82,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
     static boolean email_sent = false;
     static String user_email ="";
 
+    //static UpdateChecker checker ;
+
 
  //  public static ConditionVariable ConnectionCondition = new ConditionVariable(false); // for wait-notify
 
@@ -92,7 +94,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         Log.d("Checking flow", " MainActivity on create.....");
+
         context = getApplicationContext();
         Log.d("Main Activity", "Starting the heartbeat service");
         Intent startServiceIntent = new Intent(this, Heartbeat.class);

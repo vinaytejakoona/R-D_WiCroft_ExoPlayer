@@ -40,7 +40,7 @@ public class Experiment extends Service {
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.mipmap.wicroft)
-                        .setContentTitle("Loadgenerator")
+                        .setContentTitle("WiCroft")
                         .setContentText("Experiment in Progress..!!");
 
         notification = mBuilder.build();
