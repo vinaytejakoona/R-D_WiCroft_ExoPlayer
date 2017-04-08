@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_pause.png",
+        "source": "/home/project/.android/build-cache/78f836a7fcc9da7c5de0ac43a710eda24771cded/output/res/drawable-ldpi-v4/exo_controls_pause.png"
+    },
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_rewind.png",
+        "source": "/home/project/.android/build-cache/78f836a7fcc9da7c5de0ac43a710eda24771cded/output/res/drawable-ldpi-v4/exo_controls_rewind.png"
+    },
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_previous.png",
+        "source": "/home/project/.android/build-cache/78f836a7fcc9da7c5de0ac43a710eda24771cded/output/res/drawable-ldpi-v4/exo_controls_previous.png"
+    },
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_play.png",
+        "source": "/home/project/.android/build-cache/78f836a7fcc9da7c5de0ac43a710eda24771cded/output/res/drawable-ldpi-v4/exo_controls_play.png"
+    },
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_fastforward.png",
+        "source": "/home/project/.android/build-cache/78f836a7fcc9da7c5de0ac43a710eda24771cded/output/res/drawable-ldpi-v4/exo_controls_fastforward.png"
+    },
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_next.png",
+        "source": "/home/project/.android/build-cache/78f836a7fcc9da7c5de0ac43a710eda24771cded/output/res/drawable-ldpi-v4/exo_controls_next.png"
+    }
+]

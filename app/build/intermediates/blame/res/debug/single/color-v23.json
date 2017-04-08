@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/swinky/testWifi/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/swinky/testWifi/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/home/swinky/WiCroft/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/project/.android/build-cache/efe18ab445d7ad8b64582165d25fd97e03862930/output/res/color-v23/abc_color_highlight_material.xml"
+    }
+]

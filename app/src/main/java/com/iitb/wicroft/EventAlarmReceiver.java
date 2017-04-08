@@ -6,10 +6,14 @@ package com.iitb.wicroft;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Random;
+import java.util.UUID;
+
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.WakefulBroadcastReceiver;
 import android.util.Log;
@@ -28,7 +32,7 @@ public class EventAlarmReceiver extends WakefulBroadcastReceiver
         String msg = "EventAlarm Receiver : ";
 
             if(!MainActivity.running){
-               // Log.d(Constants.LOGTAG, "Alarm Receiver : alarm just received. But experiment not running");
+               Log.d(Constants.LOGTAG, "Alarm Receiver : alarm just received. But experiment not running");
                 msg +=" alarm just received. But experiment not running ";
 
                 return;
@@ -36,20 +40,42 @@ public class EventAlarmReceiver extends WakefulBroadcastReceiver
 
             int eventid = bundle.getInt("eventid");
 
-            if(eventid >= 0){
-               // Log.d(Constants.LOGTAG, "Alarm Receiver : alarm just received (eventid=" + eventid + ") Now preparing to handle event");
+            if(eventid > 0){
+               Log.d(Constants.LOGTAG, "Alarm Receiver : alarm just received (eventid=" + eventid + ") Now preparing to handle event");
 
                 msg+="\n alarm just received (eventid=" + eventid + ") Now preparing to handle event";
+
                 Intent callingIntent = new Intent(context, DownloaderService.class);
+
+                String sampleName = null;
+                String uri = "http://www.youtube.com/api/manifest/dash/id/bf5bb2419360daf1/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=51AF5F39AB0CEC3E5497CD9C900EBFEAECCCB5C7.8506521BFC350652163895D4C26DEE124209AA9E&key=ik0";
+
+                String extension = "mpd";
+                UUID drmUuid = null;
+                String drmLicenseUrl = null;
+                UUID drmSchemeUuid = null;
+                String[] drmKeyRequestProperties = null;
+                boolean preferExtensionDecoders = false;
+
+                //callingIntent.setData(Uri.parse(uri));
+                callingIntent.putExtra(DownloaderService.EXTENSION_EXTRA, extension);
+                callingIntent.setAction(DownloaderService.ACTION_VIEW);
+
+                callingIntent.putExtra(DownloaderService.PREFER_EXTENSION_DECODERS, preferExtensionDecoders);
+                if (drmSchemeUuid != null) {
+                    callingIntent.putExtra(DownloaderService.DRM_SCHEME_UUID_EXTRA, drmSchemeUuid.toString());
+                    callingIntent.putExtra(DownloaderService.DRM_LICENSE_URL, drmLicenseUrl);
+                    callingIntent.putExtra(DownloaderService.DRM_KEY_REQUEST_PROPERTIES, drmKeyRequestProperties);
+                }
+
                 callingIntent.putExtra("eventid", (int)eventid);
                 startWakefulService(context, callingIntent);
-
-
                 msg+=" Started the Downloader Service";
             }
             else{
                 msg += " eventid=" + eventid + " Setting up first alarm";
             }
+        Log.d(" EventAlarmReceiver:" , " MainActivity.currEvent =  "+MainActivity.currEvent);
 
         Log.d(Constants.LOGTAG, msg);
         if(MainActivity.debugging_on) {
@@ -62,8 +88,9 @@ public class EventAlarmReceiver extends WakefulBroadcastReceiver
         }
 
 
+
     //Looks at next event from eventlist and schedules next alarm
-    void scheduleNextAlarm(Context context){
+   void scheduleNextAlarm(Context context){
         String msg = "EventAlarmeceiver - ScheduleNextAlarm ";
 
         if(!MainActivity.running){
@@ -77,24 +104,33 @@ public class EventAlarmReceiver extends WakefulBroadcastReceiver
             return;
         }
 
-        if(MainActivity.currEvent >= MainActivity.load.events.size()) {
-            msg+= "scheduleNextAlarm : All alarms over. Curr Experiment finished";
+        if(MainActivity.currEvent >= MainActivity.load.independent_events.size()) {
+            msg+= "scheduleNextAlarm : All independent events alarms over.";
             return;
         }
 
-
        // RequestEvent e = MainActivity.load.events.get(MainActivity.currEvent);
-        RequestEvent e = new RequestEvent( MainActivity.load.events.get(MainActivity.currEvent) ) ;
+       Log.d("EventAlarmRx :nextalarm" , " MainActivity.currEvent =  "+MainActivity.currEvent);
+        RequestEvent e = new RequestEvent( MainActivity.load.independent_events.get(MainActivity.currEvent) ) ;
         Intent intent = new Intent(context, EventAlarmReceiver.class);
-        intent.putExtra("eventid", (int)MainActivity.currEvent);
+        intent.putExtra("eventid", (int) e.event_id);
 
-        PendingIntent sender = PendingIntent.getBroadcast(context, Constants.alarmRequestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+       Random r = new Random();
+       int i1 = r.nextInt(10000 - 0) + 0;
+        PendingIntent sender = PendingIntent.getBroadcast(context, Constants.alarmRequestCode+i1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
      msg +="\n e.cal time in millisec : "+ Long.toString(e.cal.getTimeInMillis()) + "MainActivity.serverTimeDelta : " + Long.toString(MainActivity.serverTimeDelta);
-        msg+="\n Scheduling " + MainActivity.currEvent + "@" + MainActivity.sdf.format(e.cal.getTime());
+        msg+="\n Scheduling " + e.event_id + "@" + MainActivity.sdf.format(e.cal.getTime());
         msg+= "\n current time in ms :" + Long.toString(Calendar.getInstance().getTimeInMillis());
         msg+= "\n alarmwakeup in ms"+ Long.toString(e.cal.getTimeInMillis() - MainActivity.serverTimeDelta);
-		MainActivity.am.set(AlarmManager.RTC_WAKEUP, e.cal.getTimeInMillis() - MainActivity.serverTimeDelta, sender);
+       if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT){
+           // Do something for kitkat and above versions
+           MainActivity.am.setExact(AlarmManager.RTC_WAKEUP, e.cal.getTimeInMillis() - MainActivity.serverTimeDelta, sender);
+       } else{
+           // do something for phones running an SDK before kitkat
+           MainActivity.am.set(AlarmManager.RTC_WAKEUP, e.cal.getTimeInMillis() - MainActivity.serverTimeDelta, sender);
+       }
+
        // Log.d(Constants.LOGTAG, MainActivity.sdf.format(cal.getTime()) + "Scheduling " + MainActivity.currEvent + "@" + MainActivity.sdf.format(e.cal.getTime()) + "\n");
 
 
@@ -117,6 +153,35 @@ public class EventAlarmReceiver extends WakefulBroadcastReceiver
             Threads.writeToLogFile(MainActivity.debugfilename, format1.format(cal.getTime()) + " " + Utils.sdf.format(cal.getTime()) + msg);
         }
 
+
+    }
+
+
+    public static void schedule_event(Context context , RequestEvent e){
+
+        Intent intent = new Intent(context, EventAlarmReceiver.class);
+        intent.putExtra("eventid", (int)e.event_id);
+        Random r = new Random();
+        int i1 = r.nextInt(10000 - 0) + 0;
+        PendingIntent sender = PendingIntent.getBroadcast(context, 123456+i1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        String msg = "Schedule_dependency_event";
+        msg+="\n Scheduling " + e.event_id + "@ " + e.relative_time;
+        long curr_time = System.currentTimeMillis();
+        long t = e.relative_time*1000;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            MainActivity.am.setExact(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + t, sender);
+        }
+        else{
+            MainActivity.am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + t, sender);
+        }
+
+
+        Log.d(Constants.LOGTAG, msg);
+        if(MainActivity.debugging_on) {
+            Calendar cal = Calendar.getInstance();
+            SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+            Threads.writeToLogFile(MainActivity.debugfilename, format1.format(cal.getTime()) + " " + Utils.sdf.format(cal.getTime()) + msg);
+        }
 
     }
 }

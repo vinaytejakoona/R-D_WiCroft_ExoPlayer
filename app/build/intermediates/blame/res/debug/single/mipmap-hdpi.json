@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/mipmap-hdpi/wicroft.png",
+        "source": "/home/project/StudioProjects/WiCroft/app/src/main/res/mipmap-hdpi/wicroft.png"
+    },
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/home/project/StudioProjects/WiCroft/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    }
+]

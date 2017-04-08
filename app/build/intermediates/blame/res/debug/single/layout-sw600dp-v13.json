@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/swinky/WiCroft/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/swinky/testWifi/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/home/swinky/testWifi/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/home/project/.android/build-cache/c7681ad63e0b707c87bc24e243fb954bc504d83f/output/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    }
+]

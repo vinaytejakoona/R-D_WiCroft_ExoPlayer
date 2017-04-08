@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/swinky/WiCroft/app/build/intermediates/res/merged/release/menu/menu_main.xml",
+        "source": "/home/swinky/WiCroft/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/home/swinky/testWifi/app/build/intermediates/res/merged/release/menu/menu_main.xml",
+        "source": "/home/swinky/testWifi/app/src/main/res/menu/menu_main.xml"
+    }
+]

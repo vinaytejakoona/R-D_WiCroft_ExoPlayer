@@ -1,0 +1,7 @@
+#Fri Apr 07 10:37:50 IST 2017
+base.0=/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_547758ee408a209c8506fa27a90343c3355face9
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_42a17452af479c2fc6c5b9132ec0905cc16464ca/classes.dex
+base.1=/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_42a17452af479c2fc6c5b9132ec0905cc16464ca
+file.0=/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_547758ee408a209c8506fa27a90343c3355face9/classes.dex

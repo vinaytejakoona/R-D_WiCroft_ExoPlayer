@@ -1,0 +1,24 @@
+-keep class com.iitb.wicroft.MainActivity { <init>(); }
+-keep class com.iitb.wicroft.AlarmReceiver { <init>(); }
+-keep class com.iitb.wicroft.UpdateManager { <init>(); }
+-keep class com.iitb.wicroft.WiFiChecker { <init>(); }
+-keep class com.iitb.wicroft.ForegroundAppService { <init>(); }
+-keep class com.iitb.wicroft.DeviceInfo { <init>(); }
+-keep class com.iitb.wicroft.Heartbeat { <init>(); }
+-keep class com.iitb.wicroft.BackgroundServices { <init>(); }
+-keep class com.iitb.wicroft.Experiment { <init>(); }
+-keep class com.iitb.wicroft.UpdateService { <init>(); }
+-keep class com.iitb.wicroft.DownloaderService { <init>(); }
+-keep class com.iitb.wicroft.EventAlarmReceiver { <init>(); }
+-keep class com.iitb.wicroft.ChangeAp { <init>(); }
+-keep class com.iitb.wicroft.BackgroundAppReceiver { <init>(); }
+-keep class com.iitb.wicroft.ResponseReceiver { <init>(); }
+-keep class com.iitb.wicroft.restartHB { <init>(); }
+-keep class com.iitb.wicroft.EnsureWifiConnection { <init>(); }
+-keep class com.iitb.wicroft.WifiScan { <init>(); }
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+-keep public class * extends java.lang.annotation.Annotation {
+    *;
+}

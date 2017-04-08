@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.iitb.wicroft"
+    android:installLocation="internalOnly"
+    android:versionCode="8"
+    android:versionName="1.7" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+    <!-- android:installLocation="internalOnly" so that the app is not closed when memory is low.. -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- to start the app when the phone reboots -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- to get email address of the user -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/wicroft"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.iitb.wicroft.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.iitb.wicroft.AlarmReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.iitb.wicroft.UpdateManager" >
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.iitb.wicroft.WiFiChecker"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.iitb.wicroft.ForegroundAppService"
+            android:exported="false" />
+        <service
+            android:name="com.iitb.wicroft.DeviceInfo"
+            android:exported="false" />
+        <service
+            android:name="com.iitb.wicroft.Heartbeat"
+            android:exported="false" />
+        <service
+            android:name="com.iitb.wicroft.BackgroundServices"
+            android:exported="false" />
+        <service
+            android:name="com.iitb.wicroft.Experiment"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.iitb.wicroft.UpdateService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.iitb.wicroft.DownloaderService"
+            android:exported="false" />
+
+        <receiver android:name="com.iitb.wicroft.EventAlarmReceiver" >
+        </receiver>
+        <receiver android:name="com.iitb.wicroft.ChangeAp" >
+        </receiver>
+        <receiver android:name="com.iitb.wicroft.BackgroundAppReceiver" >
+        </receiver>
+        <receiver android:name="com.iitb.wicroft.ResponseReceiver" >
+        </receiver>
+        <receiver android:name="com.iitb.wicroft.restartHB" >
+        </receiver>
+        <receiver android:name="com.iitb.wicroft.EnsureWifiConnection" >
+        </receiver>
+        <receiver android:name="com.iitb.wicroft.WifiScan" >
+            <intent-filter>
+                <action android:name="android.net.wifi.SCAN_RESULTS" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

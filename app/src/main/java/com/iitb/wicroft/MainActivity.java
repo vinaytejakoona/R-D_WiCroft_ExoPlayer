@@ -1,10 +1,12 @@
 package com.iitb.wicroft;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.app.AlarmManager;
@@ -13,6 +15,7 @@ import android.net.wifi.WifiManager;
 import android.view.View;
 import android.webkit.WebView;
 
+import com.google.android.exoplayer2.upstream.DefaultDataSource;
 import com.rampo.updatechecker.UpdateChecker;
 import com.rampo.updatechecker.notice.Notice;
 
@@ -22,17 +25,53 @@ import java.io.File;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
-import java.util.Locale;
+import java.util.Locale;import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.AssetManager;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.JsonReader;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseExpandableListAdapter;
+import android.widget.Button;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.exoplayer2.C;
+import com.google.android.exoplayer2.ParserException;
+import com.google.android.exoplayer2.upstream.DataSource;
+import com.google.android.exoplayer2.upstream.DataSourceInputStream;
+import com.google.android.exoplayer2.upstream.DataSpec;
+
+import com.google.android.exoplayer2.util.Assertions;
+import com.google.android.exoplayer2.util.Util;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "SampleChooserActivity";
+    Intent intent;
 
     static SimpleDateFormat sdf = new SimpleDateFormat("ZZZZ HH:mm:s:S", Locale.US);
     public static HashMap<Integer, WebView> webViewMap = new HashMap<Integer, WebView>();
 
    // public static String serverip = "10.129.28.176";
     public static int serverport = 8001;
-   // public static int sessionid = 1;
     public static int port = 8080;
 
     public static boolean debugging_on = true;
@@ -41,14 +80,13 @@ public class MainActivity extends AppCompatActivity {
     static File logDir; //directory containing log files
     static File controlDir; //dirctory containing control files
 
-   // public static boolean registered = false;
     public static Socket serverConnection = null;
-   // public static String last_heartbeat = null;
-    public static int heartbeat_duration = 60; //by default the device sends one heartbeat per 60 seconds.
+    public static int heartbeat_duration = 10; //by default the device sends one heartbeat per 60 seconds.
     public static DataInputStream dis = null;
     public static DataOutputStream dout =null;
     public static String myIp= "";
     public static int myPort = 0;
+    public static int noOfStalls =0;
 
 
 
@@ -57,8 +95,9 @@ public class MainActivity extends AppCompatActivity {
     static boolean running = false; //whether scheduling alarms and downloading is going on
     static boolean heartbeat_enabled = true ;
     static int numDownloadOver = 0; //indicates for how many events download in thread is over
-
-
+    static boolean app_in_foreground = false;
+    static boolean move_to_background = false;
+    static boolean is_running_in_foreground = false;
     static Load load = null; //this stores info about current experiment such as exp id and all events(get requests) with resp scheduled time
     static int currEvent = 0; //which event is currently being processed
 
@@ -101,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Main Activity", "Starting the heartbeat service");
         Intent startServiceIntent = new Intent(this, Heartbeat.class);
         startService(startServiceIntent);
+
     }
 
     @Override
@@ -176,4 +216,33 @@ public class MainActivity extends AppCompatActivity {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
     }
+
+
+
+//    public void start(String uri) {
+//        //startActivity(sample.buildIntent(this));
+//
+//        String sampleName = null;
+//
+//        String extension = "mpd";
+//        UUID drmUuid = null;
+//        String drmLicenseUrl = null;
+//        String[] drmKeyRequestProperties = null;
+//        boolean preferExtensionDecoders = false;
+//
+//
+//
+//        SampleChooser.Sample sample = new SampleChooser.UriSample(sampleName, drmUuid, drmLicenseUrl, drmKeyRequestProperties,
+//                preferExtensionDecoders, uri, extension);
+//
+//        this.intent= sample.buildIntent(this);
+//        startService(sample.buildIntent(this));
+//
+//
+//        //this.intent=sample.buildIntent(this);
+//
+//    }
+
 }
+
+

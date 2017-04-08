@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/swinky/testWifi/app/build/intermediates/res/merged/release/drawable-v23/abc_control_background_material.xml",
+        "source": "/home/swinky/testWifi/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable-v23/abc_control_background_material.xml"
+    },
+    {
+        "merged": "/home/swinky/WiCroft/app/build/intermediates/res/merged/release/drawable-v23/abc_control_background_material.xml",
+        "source": "/home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable-v23/abc_control_background_material.xml"
+    }
+]

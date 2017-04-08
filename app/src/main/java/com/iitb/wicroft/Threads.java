@@ -39,7 +39,9 @@ public class Threads {
 
         String temp_name = Utils.getMACAddress() ; //this would be the name at the server
         String logFilePath = Constants.logDirectory + "/" + logFileName;
-        String url = "http://" + "wicroft.cse.iitb.ac.in" + ":" + MainActivity.port + "/" + Constants.SERVLET_NAME + "/receiveLogFile.jsp";
+        //String url = "http://" + "wicroft.cse.iitb.ac.in" + ":" + MainActivity.port + "/" + Constants.SERVLET_NAME + "/receiveLogFile.jsp";
+        String url = "http://" + "10.0.0.3"+ ":" + MainActivity.port + "/" + Constants.SERVLET_NAME + "/receiveLogFile.jsp";
+
         Log.d(Constants.LOGTAG, "Upload url " + url);
 //		String url = "http://192.168.0.107/fup.php";
 
@@ -55,7 +57,7 @@ public class Threads {
         try {
             mpEntity.addPart("expID", new StringBody(logFileName));
 
-            if(logFileName.equals(MainActivity.debugfilename)) {
+            if(logFileName.equals(MainActivity.debugfilename) || logFileName.equals("ConnectionLog") ) {
 
                 SimpleDateFormat s = new SimpleDateFormat("ddMMyyyyhhmmss");
                 String format = s.format(new Date());
@@ -75,7 +77,8 @@ public class Threads {
                     logFile.delete(); //now deleting log file
                 }
                 else{
-                    Log.d(Constants.LOGTAG, "Sending Log file " + logFileName + " failed");
+
+                    Log.d(Constants.LOGTAG, "Sending Log file " + logFileName + " failed with statuscode : "+statusCode);
                 }
             } catch (ClientProtocolException e) {
                 e.printStackTrace();
@@ -125,11 +128,14 @@ public class Threads {
 
     static synchronized String saveControlFile(String controlfilename, String controlinfo){
         File controlfile = new File(MainActivity.controlDir, controlfilename);
+        if(controlfile.exists())
+            controlfile.delete();
         BufferedWriter controlwriter = null;
         String msg = "";
         try {
             controlwriter = new BufferedWriter(new FileWriter(controlfile, true));
-            controlwriter.append(controlinfo);
+            controlwriter.write(controlinfo);
+           // controlwriter.append(controlinfo);
             controlwriter.close();
             msg += " control file write success\n";
         } catch (IOException e1) {
@@ -149,7 +155,7 @@ public class Threads {
         File controlFile = new File(controlFilePath);
         if(!controlFile.exists()){
             Log.d(Constants.LOGTAG, "getcontrolFile : File not found " + controlFilePath);
-           // return 200; //already sent sometime earlier
+
         }
 
         try {

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/drawable-hdpi-v11/ic_stat_play_store.png",
+        "source": "/home/project/.android/build-cache/535f30d03509a3ff72b6f561c37a147a85a2d01f/output/res/drawable-hdpi-v11/ic_stat_play_store.png"
+    },
+    {
+        "merged": "/home/swinky/WiCroft/app/build/intermediates/res/merged/debug/drawable-hdpi-v11/ic_stat_play_store.png",
+        "source": "/home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.github.rampo.updatechecker/library/2.1.8/res/drawable-hdpi-v11/ic_stat_play_store.png"
+    },
+    {
+        "merged": "/home/swinky/WiCroft/app/build/intermediates/res/merged/debug/drawable-hdpi-v11/ic_stat_amazon.png",
+        "source": "/home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.github.rampo.updatechecker/library/2.1.8/res/drawable-hdpi-v11/ic_stat_amazon.png"
+    },
+    {
+        "merged": "/home/project/StudioProjects/WiCroft/app/build/intermediates/res/merged/debug/drawable-hdpi-v11/ic_stat_amazon.png",
+        "source": "/home/project/.android/build-cache/535f30d03509a3ff72b6f561c37a147a85a2d01f/output/res/drawable-hdpi-v11/ic_stat_amazon.png"
+    }
+]

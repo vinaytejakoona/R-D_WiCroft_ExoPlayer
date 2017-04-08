@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/project/StudioProjects/WiCroft/app/libs/httpclient-4.3.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9783d89b8eea20a517a4afc5f979bd2882b54c44">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/2/httpclient-4.3.5_7865977007b39db0b3dcef4e0ec4da6b00a1c295/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/.android/build-cache/f9bba647bfcd49fbe2ae5068bef179d28a28251e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1121e20d4c189ae76070112a18477c98cb58baf1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/.android/build-cache/78f836a7fcc9da7c5de0ac43a710eda24771cded/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c920a7c47ece67ef7633779af58b7f4990372bd1">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cfd0444f5ef0934719564e24f5c6cc4d75f67064/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/StudioProjects/WiCroft/app/libs/commons-codec-1.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4b95f4897fa13f2cd904aee711aeafc0c5295cd8">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/2/commons-codec-1.10_98ec2751396b082746165d0ab91c48a12aff91e2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/StudioProjects/WiCroft/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_42a17452af479c2fc6c5b9132ec0905cc16464ca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/.android/build-cache/7e95ae748cc6a82559572bcc3a9fc52a21d254ce/output/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_8d68e8401a04cc6663335290425544f13f3ab16d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/.android/build-cache/535f30d03509a3ff72b6f561c37a147a85a2d01f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eb5c07f3d6f461eb6f7662ad57dec8630d1ed688">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8ef2cf0a9dd10e629214fdb5c1baf2c7c7ea202a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/StudioProjects/WiCroft/app/libs/httpmime-4.3.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1dd0d38df9c6d21e893f2e52403f1cd99e91cd81">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/2/httpmime-4.3.5_8e89d23c47ad372f45b4d1db9da66db7ae896a8e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/StudioProjects/WiCroft/app/libs/apache-mime4j-core-0.7.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a81264fe0265ebe8fd1d8128aad06dc320de6eef">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/2/apache-mime4j-core-0.7.2_cf92613771007632efb90d3023c766eb1b6597b7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/.android/build-cache/c7681ad63e0b707c87bc24e243fb954bc504d83f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_745e6c2aefb8cd3bee645c8499af3f859dfdac8f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/.android/build-cache/0b93323b4731d28643a841c1ce693b97526ed2aa/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fed4cbcc8850911ca74a87fa11110cdf893102a5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/.android/build-cache/efe18ab445d7ad8b64582165d25fd97e03862930/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_982de2433d286976219dab018bf6f04d67b6ec99/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/StudioProjects/WiCroft/app/libs/httpcore-4.3.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="31fbbff1ddbf98f3aa7377c94d33b0447c646b6e">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/2/httpcore-4.3.2_fdef28387134e88d90be3e8e6780a44bf6bd25fd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/.android/build-cache/4dd63272168cc4c4dfb282d2018ab681d23c881c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e149d70e0dee839ecdd52b23943f68e4a2bf15b0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/.android/build-cache/7e95ae748cc6a82559572bcc3a9fc52a21d254ce/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8f1207120d540711d7cf021c5632a6094d28e6df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/StudioProjects/WiCroft/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="38a364ded05f9bbdd9621089dc29dd6e6372a07a">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_547758ee408a209c8506fa27a90343c3355face9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/StudioProjects/WiCroft/app/libs/json-simple-1.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5d6f9b6a9ddca2a28c0216cc44efb2e20d9c23b5">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/2/json-simple-1.1.1_8244adb21778c142b59fb768be7f445ec2b3f00d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/project/.android/build-cache/74b482218bfc903954c751fddb7468d092666baa/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e02d64595a49fd63f0f82392234dddbbfa38db16/classes.dex" />
+    </item>
+
+</items>

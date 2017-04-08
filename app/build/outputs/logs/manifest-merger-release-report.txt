@@ -1,0 +1,264 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:2:1-127:12
+	package
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:3:5-31
+		INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml
+		INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml
+		INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml
+		INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml
+	android:installLocation
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:3:32-70
+uses-permission#android.permission.INTERNET
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:12:5-71
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:12:22-68
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:14:5-68
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:14:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:17:5-18:23
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:17:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:19:5-75
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:19:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:20:5-75
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:20:22-73
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:22:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:23:22-76
+application
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:27:5-125:19
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:30:9-41
+	android:supportsRtl
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:31:9-35
+	android:allowBackup
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:28:9-35
+	android:icon
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:29:9-39
+	android:theme
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:32:9-40
+activity#com.iitb.wicroft.MainActivity
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:35:9-45:20
+	android:label
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:37:13-45
+	android:launchMode
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:39:13-44
+	android:theme
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:38:13-56
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:36:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:40:13-44:29
+action#android.intent.action.MAIN
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:41:17-69
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:41:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:43:17-77
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:43:27-74
+receiver#com.iitb.wicroft.AlarmReceiver
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:50:9-58:20
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:50:19-48
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.QUICKBOOT_POWERON
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:51:13-54:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:52:17-79
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:52:25-76
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:53:17-82
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:53:25-79
+intent-filter#android.intent.action.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:55:13-57:29
+action#android.intent.action.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:56:17-103
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:56:25-100
+receiver#com.iitb.wicroft.UpdateManager
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:60:9-64:20
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:60:19-48
+intent-filter#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:61:13-63:29
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:62:17-84
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:62:25-81
+receiver#com.iitb.wicroft.WiFiChecker
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:66:9-77:20
+	android:enabled
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:68:13-35
+	android:exported
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:69:13-36
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:67:13-40
+intent-filter#android.net.wifi.WIFI_STATE_CHANGED
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:71:13-73:29
+action#android.net.wifi.WIFI_STATE_CHANGED
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:72:17-78
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:72:25-75
+intent-filter#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:74:13-76:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:75:17-79
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:75:25-76
+service#com.iitb.wicroft.ForegroundAppService
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:80:9-82:40
+	android:exported
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:82:13-37
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:81:13-49
+service#com.iitb.wicroft.DeviceInfo
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:84:9-86:40
+	android:exported
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:86:13-37
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:85:13-39
+service#com.iitb.wicroft.Heartbeat
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:88:9-90:40
+	android:exported
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:90:13-37
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:89:13-38
+service#com.iitb.wicroft.BackgroundServices
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:92:9-93:40
+	android:exported
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:93:13-37
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:92:18-52
+service#com.iitb.wicroft.Experiment
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:95:9-96:40
+	android:enabled
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:95:18-40
+	android:exported
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:96:13-37
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:95:41-67
+service#com.iitb.wicroft.UpdateService
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:98:9-99:40
+	android:enabled
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:98:18-40
+	android:exported
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:99:13-37
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:98:41-70
+service#com.iitb.wicroft.DownloaderService
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:101:9-103:39
+	android:exported
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:103:13-37
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:102:13-46
+receiver#com.iitb.wicroft.EventAlarmReceiver
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:105:9-106:20
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:105:19-53
+receiver#com.iitb.wicroft.ChangeAp
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:107:9-108:20
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:107:19-43
+receiver#com.iitb.wicroft.BackgroundAppReceiver
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:109:9-110:20
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:109:19-56
+receiver#com.iitb.wicroft.ResponseReceiver
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:111:9-112:20
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:111:19-51
+receiver#com.iitb.wicroft.restartHB
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:113:9-114:20
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:113:19-44
+receiver#com.iitb.wicroft.EnsureWifiConnection
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:115:9-116:20
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:115:19-55
+receiver#com.iitb.wicroft.WifiScan
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:117:9-121:20
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:117:19-43
+intent-filter#android.net.wifi.SCAN_RESULTS
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:118:13-120:29
+action#android.net.wifi.SCAN_RESULTS
+ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:119:17-79
+	android:name
+		ADDED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml:119:25-69
+uses-sdk
+INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
+MERGED from [com.github.rampo.updatechecker:library:2.1.8] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.github.rampo.updatechecker/library/2.1.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/AndroidManifest.xml:20:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.2.1] /home/swinky/WiCroft/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml
+		INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml
+		INJECTED from /home/swinky/WiCroft/app/src/main/AndroidManifest.xml
