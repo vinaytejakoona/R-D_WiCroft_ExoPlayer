@@ -111,8 +111,6 @@
                 <action android:name="android.net.wifi.SCAN_RESULTS" />
             </intent-filter>
         </receiver>
-
-        <service android:name="com.iitb.wicroft.MyPlayerService" />
     </application>
 
 </manifest>

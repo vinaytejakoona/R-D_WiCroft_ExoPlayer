@@ -481,7 +481,7 @@ public class Utils {
 
                     try {
                     //MainActivity.serverConnection = new Socket("wicroft.cse.iitb.ac.in", MainActivity.serverport);
-                        MainActivity.serverConnection = new Socket("10.0.0.3", MainActivity.serverport);
+                        MainActivity.serverConnection = new Socket("10.0.0.8", MainActivity.serverport);
                     Log.d("Utils", "creating new socket...");
 
                     try {

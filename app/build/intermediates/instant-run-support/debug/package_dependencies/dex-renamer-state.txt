@@ -1,4 +1,4 @@
-#Fri Apr 07 00:04:15 IST 2017
+#Mon Apr 10 17:20:39 IST 2017
 file.2=/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.2.0_e12b04bb2f855af30e967353a8f0ebf18a5bdbd0/classes.dex
 base.2=/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.2.0_e12b04bb2f855af30e967353a8f0ebf18a5bdbd0
 file.1=/home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_745e6c2aefb8cd3bee645c8499af3f859dfdac8f/classes.dex

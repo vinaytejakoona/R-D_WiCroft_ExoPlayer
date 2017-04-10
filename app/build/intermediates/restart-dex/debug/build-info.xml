@@ -6,22 +6,22 @@
     density="hdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1491668605003"
+    timestamp="1491840882843"
     token="1546789042672438673"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="274" />
+        duration="375" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="7" />
+        duration="10" />
     <task
         name="verifier"
-        duration="2" />
+        duration="3" />
 
     <artifact
         location="/home/project/StudioProjects/WiCroft/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -32,14 +32,8 @@
 
     <build
         build-mode="FULL"
-        timestamp="1491663832559"
+        timestamp="1491840628999"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/home/project/StudioProjects/WiCroft/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/project/StudioProjects/WiCroft/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
         <artifact
             location="/home/project/StudioProjects/WiCroft/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
@@ -48,6 +42,9 @@
             type="SPLIT" />
         <artifact
             location="/home/project/StudioProjects/WiCroft/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/project/StudioProjects/WiCroft/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
             location="/home/project/StudioProjects/WiCroft/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
@@ -70,18 +67,13 @@
         <artifact
             location="/home/project/StudioProjects/WiCroft/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1491668285698"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/project/StudioProjects/WiCroft/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1491668605003"
+        timestamp="1491840882843"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/project/StudioProjects/WiCroft/app/build/intermediates/split-apk/debug/slices/slice_4.apk"

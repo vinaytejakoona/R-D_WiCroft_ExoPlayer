@@ -57,6 +57,7 @@ import java.net.CookiePolicy;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.UUID;
+import com.google.android.exoplayer2.Format;
 
 /**
  * Created by swinky on 3/7/16.
@@ -195,7 +196,8 @@ public class DownloaderService extends IntentService implements ExoPlayer.EventL
                     "RSSI:" + MainActivity.rssi + "dBm " +
                     "BSSID:" + MainActivity.bssid + " " +
                     "SSID:" + MainActivity.ssid + " " +
-                    "LINK_SPEED:" + MainActivity.linkSpeed + "Mbps " + " Total_Playback_Time:" + (endTime - startTime) +  " Number_Of_Stalls:"+numberOfStalls +" Video_Length:"+player.getDuration()+" Buffering_Time:"+((endTime-startTime)-player.getDuration()));
+                    "LINK_SPEED:" + MainActivity.linkSpeed + "Mbps " + " Total_Playback_Time:" + (endTime - startTime) +  " Number_Of_Stalls:"+numberOfStalls +" Video_Length:"+player.getDuration()+" Buffering_Time:"+((endTime-startTime)-player.getDuration()) +
+                    " Average_Bitrate:"+ BANDWIDTH_METER.getBitrateEstimate());
 
         }
         if((playbackState== ExoPlayer.STATE_BUFFERING || playbackState==ExoPlayer.STATE_IDLE) && playWhenReady==true){
@@ -565,6 +567,8 @@ public class DownloaderService extends IntentService implements ExoPlayer.EventL
 
                     Calendar buffer_end = Utils.getServerCalendarInstance();
                     long buffer_endTime = buffer_end.getTimeInMillis();
+
+
                     if(player.getPlaybackState()==ExoPlayer.STATE_BUFFERING || player.getPlaybackState()==ExoPlayer.STATE_IDLE){
                         if(buffer_endTime-buffering_startTime>5000){
                             //Log.d("metrics","restart player");

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml:2:1-132:12
+ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml:2:1-127:12
 	package
 		ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml
@@ -52,7 +52,7 @@ ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml
 	android:name
 		ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml:23:22-76
 application
-ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml:27:5-130:19
+ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml:27:5-125:19
 MERGED from [com.android.support:design:23.2.1] /home/project/.android/build-cache/c7681ad63e0b707c87bc24e243fb954bc504d83f/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.2.1] /home/project/.android/build-cache/efe18ab445d7ad8b64582165d25fd97e03862930/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.1] /home/project/.android/build-cache/4dd63272168cc4c4dfb282d2018ab681d23c881c/output/AndroidManifest.xml:7:5-20
@@ -220,10 +220,6 @@ action#android.net.wifi.SCAN_RESULTS
 ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml:120:17-79
 	android:name
 		ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml:120:25-69
-service#com.iitb.wicroft.MyPlayerService
-ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml:128:9-52
-	android:name
-		ADDED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml:128:18-49
 uses-sdk
 INJECTED from /home/project/StudioProjects/WiCroft/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] /home/project/.android/build-cache/0b93323b4731d28643a841c1ce693b97526ed2aa/output/AndroidManifest.xml:18:5-42

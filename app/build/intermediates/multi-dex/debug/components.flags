@@ -1,87 +1,25 @@
--injars /home/swinky/WiCroft/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
--outjars /home/swinky/WiCroft/app/build/intermediates/multi-dex/debug/componentClasses.jar
+-injars /home/project/StudioProjects/WiCroft/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
+-outjars /home/project/StudioProjects/WiCroft/app/build/intermediates/multi-dex/debug/componentClasses.jar
 
--libraryjars /home/swinky/Android/build-tools/23.0.2/lib/shrinkedAndroid.jar
+-libraryjars /home/project/Android/Sdk/build-tools/25.0.0/lib/shrinkedAndroid.jar
 
 -forceprocessing
 -dontoptimize
 -dontobfuscate
 -dontusemixedcaseclassnames
 -dontpreverify
--dontwarn
--printconfiguration /home/swinky/WiCroft/app/build/intermediates/multi-dex/debug/components.flags
+-dontnote **
+-dontwarn **
+-printconfiguration /home/project/StudioProjects/WiCroft/app/build/intermediates/multi-dex/debug/components.flags
 
 
--keep class com.iitb.wicroft.MainActivity {
+-keep public class * extends android.app.Instrumentation {
     <init>();
 }
 
--keep class com.iitb.wicroft.AlarmReceiver {
+-keep public class * extends android.app.Application {
     <init>();
-}
-
--keep class com.iitb.wicroft.UpdateManager {
-    <init>();
-}
-
--keep class com.iitb.wicroft.WiFiChecker {
-    <init>();
-}
-
--keep class com.iitb.wicroft.ForegroundAppService {
-    <init>();
-}
-
--keep class com.iitb.wicroft.DeviceInfo {
-    <init>();
-}
-
--keep class com.iitb.wicroft.Heartbeat {
-    <init>();
-}
-
--keep class com.iitb.wicroft.BackgroundServices {
-    <init>();
-}
-
--keep class com.iitb.wicroft.Experiment {
-    <init>();
-}
-
--keep class com.iitb.wicroft.UpdateService {
-    <init>();
-}
-
--keep class com.iitb.wicroft.DownloaderService {
-    <init>();
-}
-
--keep class com.iitb.wicroft.EventAlarmReceiver {
-    <init>();
-}
-
--keep class com.iitb.wicroft.ChangeAp {
-    <init>();
-}
-
--keep class com.iitb.wicroft.BackgroundAppReceiver {
-    <init>();
-}
-
--keep class com.iitb.wicroft.ResponseReceiver {
-    <init>();
-}
-
--keep class com.iitb.wicroft.restartHB {
-    <init>();
-}
-
--keep class com.iitb.wicroft.EnsureWifiConnection {
-    <init>();
-}
-
--keep class com.iitb.wicroft.WifiScan {
-    <init>();
+    void attachBaseContext(android.content.Context);
 }
 
 -keep public class * extends android.app.backup.BackupAgent {
@@ -89,6 +27,11 @@
 }
 
 -keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.android.tools.fd.** {
     <fields>;
     <methods>;
 }
